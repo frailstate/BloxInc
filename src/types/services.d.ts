@@ -4,4 +4,6 @@ interface Workspace extends Instance {
 	}
 
 	Boxes: Folder
+
+	DropPart: BasePart
 }

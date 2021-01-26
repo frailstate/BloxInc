@@ -12,7 +12,7 @@ export class Box {
 	/**
 	 * Renders the box; adds information and parents to `Workspace`
 	 * @param owner The player that will own this box
-	 * @todo set network ownership
+	 * 
 	 */
 	render(owner: Player) {
 		let existingBox = Workspace.Boxes.FindFirstChild(owner.Name)
@@ -22,6 +22,9 @@ export class Box {
 
 		this.box.Name = this.owner.Name
 		this.box.Parent = Workspace.Boxes
+
+		this.box.SetNetworkOwner(this.owner)
+
 		this.update()
 	}
 
